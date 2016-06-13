@@ -1,0 +1,4 @@
+
+14 10 * * * root /home/panda/set_relay 0 0
+
+15 10 * * * root /home/panda/set_relay 0 0
