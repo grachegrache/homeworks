@@ -1,0 +1,1 @@
+cmd_/root/hw8/achro/fnd_driver.ko := /toolchain/arm-2010q1/bin/arm-none-linux-gnueabi-ld -EL -r  -T /work/kernel/scripts/module-common.lds --build-id  -o /root/hw8/achro/fnd_driver.ko /root/hw8/achro/fnd_driver.o /root/hw8/achro/fnd_driver.mod.o

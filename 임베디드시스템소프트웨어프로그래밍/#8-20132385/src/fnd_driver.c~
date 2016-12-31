@@ -1,0 +1,36 @@
+#include <linux/module.h>
+#include <linux/fs.h>
+#include <linux/init.h>
+#include <linux/slab.h>
+#include <mach/gpio.h>
+#include <mach/regs-gpio.h>
+#include <plat/gpio-cfg.h>
+#include <linux/platform_device.h>
+#include <linux/delay.h>
+#include <asm/io.h>
+#include <asm/uaccess.h>
+#include <linux/kernel.h>
+#include <linux/ioport.h>
+#include <linux/version.h>
+
+#define FND_MAJOR 261
+#define FND_NAME "fpga_fnd"
+#define FND_ADDRESS 0x07000004
+#define DEMO_ADDRESS 0x07000300
+#define UON 0x00
+#define UOFF 0x01
+
+static int fnd_port_usage = 0;;
+static unsigned char *fnd_addr;
+static unsigned char *demo_addr;
+
+int __init fnd_init(void);
+void __exit fnd_exit(void);
+int fnd_open(struct inode* minode, struct file* mfile);
+int fnd_release(struct inode* minode, struct file* mfile);
+ssize_t fnd_write(struct file* inode, const char* gdata, size_t length, loff_t* off_what);
+ssize_t fnd_read(struct file* inode, char* gdata, size_t length, loff_t* off_what);
+
+struct file_operations fnd_fops =
+{
+	.open = fnd_open,

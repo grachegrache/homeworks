@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (practice01.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  texture.cpp
+  main.cpp
+  image_loader.cpp
+  gl_io_func.cpp
+  camera.cpp
+  코드를 생성하고 있습니다...
+  practice01.vcxproj -> C:\Users\PINKPANDA\Documents\Visual Studio 2013\Projects\minions\Debug\minions.exe
